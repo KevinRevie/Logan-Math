@@ -16,7 +16,7 @@
         <h1>Logan Math</h1>
         <div class="row">
             <div class="col-12">
-                <i>Formula: Starting Amount - (Starting Amount * Percent) + Add Amount</i><br />&nbsp;
+                <i>Formula: (Starting Amount * Percent) + Add Amount</i><br />&nbsp;
             </div>
             <div class="col-12">
                 <label for="starting-amount">Starting Amount: </label> <input type="text" id="starting-amount" name="starting-amount" />
@@ -42,7 +42,7 @@
                         // your statements;
                         var x = parseFloat($("#starting-amount").val());
                         for (var i = 1; i < 500; i++) {
-                            x = x - (x * parseFloat($("#percent").val())) + parseFloat($("#add-amount").val());
+                            x = (x * parseFloat($("#percent").val())) + parseFloat($("#add-amount").val());
                             //Response.Write("<p>i=" + i + ":x=" + x + "</p>");
                             document.getElementById('answer').innerHTML = document.getElementById('answer').innerHTML + "<div class='result'><span class='count'>Count:&nbsp;&nbsp;" + i + "</span><span class='value'>Value:&nbsp;&nbsp;" + x + "</span></div>";
                         }
